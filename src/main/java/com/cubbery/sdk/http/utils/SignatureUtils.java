@@ -72,7 +72,7 @@ public final class SignatureUtils {
             Properties pVersion = getProperties(path);
             return pVersion.getProperty(MAVEN_PROJECT_VERSION);
         } catch (Exception e) {
-            logger.error("读取ScheduleConfig 的版本号配置文件错误:", e);
+            logger.error("读取版本号配置文件错误:", e);
             return "";
         }
     }
