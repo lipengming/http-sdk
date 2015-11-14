@@ -1,4 +1,6 @@
 # http-sdk
+[![Build Status](https://travis-ci.org/cncduLee/http-sdk.svg?branch=master)]
+
 a simple http sdk tool,you can use it on modile app and as a powerful resetful client.
 
 一个简单一样纯JAVA的HTTP工具组件。你可以用它来作为Android等移动应用访问后台服务的工具，
