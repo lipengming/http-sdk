@@ -14,7 +14,7 @@ public class HttpClientTest {
 
     static HttpRequestBuilder httpRequestBuilder = new HttpRequestBuilder();
     static {
-        httpRequestBuilder.setUrl("http://www.jd.com");
+        httpRequestBuilder.setUrl("http://www.baidu.com");
     }
 
     @Test
@@ -24,7 +24,7 @@ public class HttpClientTest {
         assertEquals(response.getReturnCode(),200);
     }
 
-    @Test
+    //@Test
     public void testExecuteProxy() throws Exception {
         HttpConfig httpConfig = HttpConfig.DEFAULT;
         //httpConfig.setRequestTimeout(2000);//2s

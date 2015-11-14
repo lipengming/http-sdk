@@ -20,10 +20,10 @@ import java.util.List;
  */
 public class Duitang {
     public boolean success;
-    ResponseData data;
+    Data data;
 }
 
-class ResponseData {
+class Data {
     List<Blog> blogs;
     boolean hasNext;
     boolean hasrp;

@@ -17,6 +17,5 @@ public class HttpClientSdkTest {
         DuitangRes duitangRes = httpClientSdk.execute(request);
         assertEquals(duitangRes.isSuccess(),true);
         assertEquals(duitangRes.content().success,true);
-
     }
 }
