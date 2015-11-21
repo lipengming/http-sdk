@@ -19,9 +19,9 @@ package com.cubbery.sdk.http.core;
 public interface Constant {
     static final String DEFAULT_CHARSET = "UTF-8";
     static final String CONNECTION = "Connection";
-    static final String KEEP_ALIVE = "Keep-Alive";
+    static final String KEEP_ALIVE = "Keep-Alive";//共享连接，减少连接数量
     static final String CONTENT_ENCODING = "Content-Encoding";
-    static final String CONTENT_TYPE = "Content-Type";
-    static final String DATE = "Date";
-    static final String CONTENT_LENGTH = "Content-Length";
+    static final String CONTENT_TYPE = "Content-Type";//mime类型
+    static final String DATE = "Date";//日期
+    static final String CONTENT_LENGTH = "Content-Length";//大小
 }

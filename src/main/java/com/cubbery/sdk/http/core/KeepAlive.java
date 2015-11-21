@@ -18,5 +18,5 @@ package com.cubbery.sdk.http.core;
  */
 public enum KeepAlive {
     TRUE, FALSE, UNKNOWN;
-    public final static String KEPP_ALIVE = "keep-alive";
+    public final static String KEEP_ALIVE = "keep-alive";
 }

@@ -52,7 +52,7 @@ public final class HttpClient {
                 connection.setRequestMethod(httpRequest.getMethodName());
                 connection.setDoOutput(true);
             }
-            if (null != httpRequest.getHeaders()) {// 设置hea ders
+            if (null != httpRequest.getHeaders()) {// 设置headers
                 for (Map.Entry<String, String> entryTmp : httpRequest.getHeaders().entrySet()) {
                     connection.setRequestProperty(entryTmp.getKey(), entryTmp.getValue());
                 }

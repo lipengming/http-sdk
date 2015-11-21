@@ -63,7 +63,7 @@ public class HttpResponse {
         if(headers == null || headers.get(Constant.CONNECTION) == null) {
             return KeepAlive.UNKNOWN;
         }
-        if(KeepAlive.KEPP_ALIVE.equalsIgnoreCase(headers.get(Constant.CONNECTION))) {
+        if(KeepAlive.KEEP_ALIVE.equalsIgnoreCase(headers.get(Constant.CONNECTION))) {
             return KeepAlive.TRUE;
         }
         return KeepAlive.FALSE;

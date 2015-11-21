@@ -23,7 +23,7 @@ public class ObjectResponse<T> extends AbstractResponse<T> {
 
     private final Class<T> clazz;
 
-    protected ObjectResponse(Class<T> clazz,HttpResponse httpResponse) {
+    public ObjectResponse(Class<T> clazz, HttpResponse httpResponse) {
         super(httpResponse);
         this.clazz = clazz;
     }
