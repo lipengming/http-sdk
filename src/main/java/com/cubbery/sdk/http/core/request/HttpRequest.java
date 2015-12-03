@@ -37,14 +37,16 @@ public abstract class HttpRequest {
 
     protected final Map<String, String[]> parameters;
 
-    protected static final String charset = Constant.DEFAULT_CHARSET;
-
     protected final Charset userCharset;
 
     public HttpRequest(HttpRequestBuilder builder) {
         this.url = builder.getUrl();
         this.headers = builder.getHeaders();
-        this.userCharset = builder.getCharset();
+        if(builder.getCharset() == null) {
+            this.userCharset = Charset.forName(Constant.DEFAULT_CHARSET);
+        } else {
+            this.userCharset = builder.getCharset();
+        }
         this.parameters = new HashMap<String, String[]>();
         Map<String, Collection<String>> params = builder.getParameters();
         for (Map.Entry<String, Collection<String>> entry : params.entrySet()) {
@@ -77,9 +79,9 @@ public abstract class HttpRequest {
         for (Map.Entry<String, String[]> entry : parameters.entrySet()) {
             String key = entry.getKey();
             if (key != null) {
-                String encodeKey = URLEncoder.encode(key, charset);
+                String encodeKey = URLEncoder.encode(key, userCharset.displayName());
                 for (String value : entry.getValue()) {
-                    paramList.add(encodeKey + "=" + URLEncoder.encode(StringUtils.defaultString(value), charset));
+                    paramList.add(encodeKey + "=" + URLEncoder.encode(StringUtils.defaultString(value), userCharset.displayName()));
                 }
             }
         }
@@ -101,10 +103,6 @@ public abstract class HttpRequest {
 
     public Map<String, String[]> getParameters() {
         return parameters;
-    }
-
-    public static String getCharset() {
-        return charset;
     }
 
     public Charset getUserCharset() {

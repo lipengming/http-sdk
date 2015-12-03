@@ -131,6 +131,11 @@ public class HttpRequestBuilder {
         return this;
     }
 
+    public HttpRequestBuilder clearParameter() {
+        this.parameters.clear();
+        return this;
+    }
+
     /**
      * 重置所有parameter,会替换掉所有paramters
      *
@@ -196,6 +201,13 @@ public class HttpRequestBuilder {
     public HttpRequestBuilder setCookie(String cookie) {
         if (StringUtils.isNotBlank(cookie)){
             headers.put("Cookie", cookie);
+        }
+        return this;
+    }
+
+    public HttpRequestBuilder setContentType(String contentType) {
+        if (StringUtils.isNotBlank(contentType)){
+            headers.put("Content-Type", contentType);
         }
         return this;
     }

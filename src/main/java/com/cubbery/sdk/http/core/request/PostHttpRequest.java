@@ -40,7 +40,7 @@ public class PostHttpRequest extends HttpRequest {
         OutputStream out = null;
         try {
             out = connection.getOutputStream();
-            out.write(strParams.getBytes(charset));
+            out.write(strParams.getBytes(userCharset));
         } finally {
             IOUtil.closeQuietly(out);
         }

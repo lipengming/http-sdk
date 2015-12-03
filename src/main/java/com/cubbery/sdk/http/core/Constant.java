@@ -17,7 +17,7 @@ package com.cubbery.sdk.http.core;
  * @version 1.0.0 <br>
  */
 public interface Constant {
-    static final String DEFAULT_CHARSET = "UTF-8";
+    static final String DEFAULT_CHARSET = "GBK";
     static final String CONNECTION = "Connection";
     static final String KEEP_ALIVE = "Keep-Alive";//共享连接，减少连接数量
     static final String CONTENT_ENCODING = "Content-Encoding";
